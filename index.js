@@ -6,9 +6,9 @@ const { MongoClient } = require('mongodb');
 const urlparser = require('url');
 const dns = require('dns');
 
-// const uri = 'mongodb+srv://yashvss:y5a6s7h5vss@clusterml.e57k8ji.mongodb.net/Clusterml';
+const uri = 'mongodb+srv://yashvss:y5a6s7h5vss@clusterml.e57k8ji.mongodb.net/Clusterml';
 console.log(process.env.PORT)
-const client = new MongoClient(process.env.DB_URL);
+const client = new MongoClient(uri);
 const db = client.db("urlShortener");
 const urls = db.collection("urls");
 
